@@ -1,0 +1,134 @@
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200; }
+
+body {
+  margin: 0; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* ==========================================================================
+   #PANELS
+   ========================================================================== */
+.c-panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* Panels item
+   ======================================================================== */
+.c-panels__item {
+  background: #6B0F9C;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  -webkit-transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), -webkit-box-flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  -webkit-transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), -webkit-flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+          transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), -webkit-box-flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+          transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), -ms-flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+          transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  .c-panels__item.is-open {
+    font-size: 40px;
+    -webkit-box-flex: 5;
+    -webkit-flex-grow: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5; }
+
+.c-panels__item--panel-1 {
+  background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
+
+.c-panels__item--panel-2 {
+  background-image: url(https://source.unsplash.com/1CD3fd8kHnE/1500x1500); }
+
+.c-panels__item--panel-3 {
+  background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+
+.c-panels__item--panel-4 {
+  background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
+
+.c-panels__item--panel-5 {
+  background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+
+/* Panels text
+   ======================================================================== */
+.c-panels__text {
+  text-transform: uppercase;
+  font-family: 'Amatic SC', cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.is-open > .c-panels__text--prominent {
+  font-size: 4em; }
+
+.c-panels__text--first {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%); }
+  .is-open > .c-panels__text--first {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
+
+.c-panels__text--last {
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%); }
+  .is-open > .c-panels__text--last {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
