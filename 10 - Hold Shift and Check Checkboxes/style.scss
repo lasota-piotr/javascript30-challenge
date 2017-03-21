@@ -1,0 +1,60 @@
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+
+html {
+  font-family: sans-serif;
+  background:#ffc600;
+}
+
+
+
+
+
+/* ==========================================================================
+   #CHECKLIST
+   ========================================================================== */
+
+.c-checklist {
+  max-width:400px;
+  margin:50px auto;
+  background:white;
+  border-radius:5px;
+  box-shadow:10px 10px 0 rgba(0,0,0,0.1);
+}
+
+  .c-checklist__item {
+    display:flex;
+    align-items:center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #F1F1F1;
+    }
+  }
+
+  .c-checklist__checkbox {
+    margin:20px;
+  }
+
+  .c-checklist__content {
+    margin:0;
+    padding:20px;
+    transition:background 0.2s;
+    flex:1;
+    font-family:'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+    border-left: 1px solid #D1E2FF;
+
+
+     /* Checked .c-checklist__content element
+    ========================================================================= */
+
+    /**
+     * 1. Styling .c-checklist__content if checkbox is checked
+     */
+    .c-checklist__checkbox:checked + & { /* [1.] */
+      background:#F9F9F9;
+      text-decoration: line-through;
+    }
+  }
