@@ -1,0 +1,88 @@
+
+html {
+  box-sizing: border-box;
+  background:url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+  background-size:cover;
+  min-height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Futura,"Trebuchet MS",Arial,sans-serif
+}
+*, *:before, *:after {box-sizing: inherit; }
+
+.c-logo {
+  fill:white;
+  background: rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 50%;
+  width:200px;
+  margin-bottom: 50px;
+}
+
+.c-menu-list {
+  padding: 20px;
+  max-width: 350px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+}
+
+  .c-menu-list__title {
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
+  }
+
+  .c-menu-list__list-items {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+  }
+
+
+  /**
+   * Item styling
+   */
+
+  .c-menu-list__item {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+  }
+
+  .c-menu-list__item-label {
+    flex:1;
+    cursor: pointer;
+
+    .c-menu-list__item-input + &:before {
+      content: '⬜️';
+      margin-right: 10px;
+    }
+
+    .c-menu-list__item-input:checked + &:before {
+      content: '🌮';
+    }
+
+  }
+
+
+  /**
+   * Add item form
+   */
+
+  .c-menu-list__item-input {
+    display: none;
+  }
+
+  .c-menu-list__add-form {
+    margin-top: 20px;
+  }
+
+  .c-menu-list__add-input {
+    padding:10px;
+    outline:0;
+    border:1px solid rgba(0,0,0,0.1);
+  }
