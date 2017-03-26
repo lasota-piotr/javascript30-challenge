@@ -66,10 +66,10 @@ html {
           flex: 1;
   cursor: pointer; }
   .c-menu-list__item-input + .c-menu-list__item-label:before {
-    content: 'ÔČť´ŞĆ';
+    content: '⬜️';
     margin-right: 10px; }
   .c-menu-list__item-input:checked + .c-menu-list__item-label:before {
-    content: '­čî«'; }
+    content: '🌮'; }
 
 /**
  * Add item form
