@@ -1,1 +1,4 @@
 challenges\ todo/
+.jshintrc
+
+node_modules/
