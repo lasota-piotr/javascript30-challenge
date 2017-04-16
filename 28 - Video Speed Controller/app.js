@@ -10,14 +10,19 @@ const videoPlayer = {
     this.video = document.querySelector('.js-video');
   },
   bindEvents() {
-    this.speed.addEventListener('mousemove', this.changeValue.bind(this));
+    this.speed.addEventListener('mousemove', this.changeSpeed.bind(this));
   },
-  changeValue(e) {
-    const percent = Math.round(e.offsetY * 100 / e.target.offsetHeight);
-    const min = 0.4;
-    const max = 4;
-    console.log(percent);
+  changeSpeed(e) {
+    function mapRange(value, low1, high1, low2, hight2) {
+      return low2 + (hight2 - low2) * (value - low1) / (high1 - low1);
+    }
+    const percent = Math.round(e.offsetY * 100 / this.speed.offsetHeight);
+    const [min, max] = [0.4, 4];
+    const playbackRate = mapRange(percent, 0, 100, 0.4, 4); 
     this.bar.style.height = `${percent}%`;
+    this.bar.textContent = `${playbackRate.toFixed(2)}x`;
+    this.video.playbackRate = playbackRate;
+    console.log(this.video.playbackRate);
   }
 
 }
